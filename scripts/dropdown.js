@@ -6,7 +6,6 @@
     const toggleContent = () => {
       _content.classList.toggle('dropdown-hidden');
     };
-    // const toggleContent = () => console.log('toggleContent');
 
     _button.addEventListener('click', toggleContent);
   }
