@@ -1,5 +1,6 @@
 
 (() => {
+  /* newTabItem constructor */
   function newTabItem({ _element }) {
     const select = () => {
       _element.classList.add('tabs-item-selected');
@@ -12,6 +13,8 @@
     return Object.freeze({ select, deselect });
   }
 
+
+  /* newTabLink constructor */
   function newTabLink({ _element, _setNewCurrentTab }) {
     const _tabItemElement = document.querySelector(
       `.tabs-items .tabs-item[data-tab='${_element.dataset.tab}']`,
@@ -38,6 +41,8 @@
     return Object.freeze({ select, deselect });
   }
 
+
+  /* newTabBox constructor */
   function newTabBox({ _element }) {
     const _tabLinkElementObjWeakMap = new WeakMap();
     let _currentTab = _element.getElementsByClassName('tabs-link-selected')[0];
