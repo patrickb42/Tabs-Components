@@ -58,5 +58,6 @@
     });
   }
 
+
   newTabBox({ _element: document.querySelector('.tabs') });
 })();
