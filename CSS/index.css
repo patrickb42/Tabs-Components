@@ -64,8 +64,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
   border: 2.5px solid #931d25;
+  margin-top: 10px;
+  max-height: 17.5rem;
+  overflow: hidden;
+  transition: max-height 500ms, border 0ms 0ms;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -80,7 +83,10 @@ body {
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  transition: max-height 500ms, border 0ms 500ms;
+  border: none;
+  max-height: 0rem;
+  overflow: hidden;
 }
 
 .tabs {
