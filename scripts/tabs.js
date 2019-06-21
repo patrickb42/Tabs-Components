@@ -44,7 +44,7 @@
   /* newTabBox constructor */
   function newTabBox({ _element }) {
     const _tabLinkElementObjWeakMap = new WeakMap();
-    let _currentTab = _element.getElementsByClassName('tabs-link-selected')[0];
+    let _currentTab = _element.querySelector('.tabs-link-selected');
 
     const _setNewCurrentTab = ({ currentTarget }) => {
       _tabLinkElementObjWeakMap.get(_currentTab).deselect();
