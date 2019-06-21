@@ -1,4 +1,3 @@
-
 (() => {
   /* newTabItem constructor */
   function newTabItem({ _element }) {
@@ -22,7 +21,7 @@
     const _tabItem = newTabItem({ _element: _tabItemElement });
 
     const updateSelectedStatus = (event) => {
-      if (Array.from(event.currentTarget.classList).includes('tabs-link-selected')) return;
+      if (event.currentTarget.classList.contains('tabs-link-selected')) return;
       _setNewCurrentTab({ currentTarget: event.currentTarget });
     };
 
